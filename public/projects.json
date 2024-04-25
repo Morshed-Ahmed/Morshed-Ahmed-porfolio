@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "bgImg": "../src/assets/image/Bazaar-Buzz banner.png",
+    "bgImg": "/src/assets/image/Bazaar-Buzz banner.png",
     "category": "Web App",
     "title": "Bazaar Buzz",
     "imgOne": "../src/assets/image/Bazaar-Buzz.png",

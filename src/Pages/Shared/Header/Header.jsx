@@ -9,7 +9,7 @@ const Header = () => {
         <div>
           <div className="avatar">
             <div className="lg:w-16 xs:w-12 mask mask-squircle">
-              <img src="./../../../../src/assets/1678859971159 (1).png" />
+              <img src="/src/assets/1678859971159 (1).png" />
             </div>
           </div>
         </div>
