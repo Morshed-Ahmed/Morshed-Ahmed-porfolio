@@ -252,9 +252,9 @@ const About = () => {
                           key={skill.id}
                           className="lg:col-span-4 xs:col-span-6"
                         >
-                          <div className="border-2 hover:border-blue-400 px-3 py-2 rounded-lg flex justify-center items-center gap-2 ">
+                          <div className="border-2 hover:border-[#ec4899] hover:text-[#ec4899] duration-300 px-3 py-2 rounded-lg flex justify-center items-center gap-2 ">
                             {skill?.icon}
-                            <h1 className="text-base font-bold">
+                            <h1 className="text-base font-bold ">
                               {skill?.title}
                             </h1>
                           </div>
@@ -302,7 +302,7 @@ const About = () => {
                         </h1>
                         <BsArrowRightCircle
                           size={25}
-                          className="hover:text-[#6C63FF] text-[#676767]"
+                          className="hover:text-[#6C63FF] text-[#676767] "
                           // color={"#676767"}
                         />
                       </div>

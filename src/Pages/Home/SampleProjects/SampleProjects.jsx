@@ -14,7 +14,7 @@ const SampleProjects = () => {
 
   return (
     <div>
-      <div className="max-w-[1250px] px-5  mx-auto pt-10">
+      <div className="container mb-28 mx-auto">
         <div className="text-center">
           <h3 className="text-xl">Sample Projects</h3>
           <h1 className="text-4xl font-bold">A few samples of my work</h1>

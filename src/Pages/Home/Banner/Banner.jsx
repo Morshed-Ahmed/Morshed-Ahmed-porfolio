@@ -1,12 +1,14 @@
+import "./Banner.css";
+
 const Banner = () => {
   return (
     <div className=" bg-gradient-to-t from-white via-emerald-200 to-blue-300 lg:pb-0 xs:pb-16 xs:pt-10 lg:pt-0 flex items-center  lg:h-[100vh]">
-      <div className="max-w-[1250px] px-4 mx-auto ">
+      <div className="container mx-auto ">
         <div className="grid grid-cols-12 gap-7 mt-16">
           <div className="lg:col-span-6 xs:col-span-12">
             <div className="card  bg-base-100 shadow-xl">
               <div className="card-body">
-                <div className="avatar">
+                <div className="avatar flex w-full justify-between">
                   <div className="w-40">
                     {/* <img
                       src="https://framerusercontent.com/images/XCFWYUzA9x0xdApopQ9DT3Pucb8.png"
@@ -38,6 +40,7 @@ const Banner = () => {
               </div>
             </div>
           </div>
+
           <div className="lg:col-span-3  xs:col-span-12">
             <div className="card  bg-base-100 shadow-xl">
               <div className="card-body">

@@ -55,7 +55,7 @@ const Projects = () => {
         {/* You can open the modal using document.getElementById('ID').showModal() method */}
 
         <dialog id="my_modal_3" className="modal  ">
-          <div className="modal-box w-11/12 max-w-5xl">
+          <div className="modal-box w-11/12 max-w-5xl ">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
               <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 ">
@@ -80,9 +80,9 @@ const Projects = () => {
               GitHub
             </a>
 
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-start mt-10">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-start mt-10 ">
               {/* Left side (image) */}
-              <div className="lg:col-span-1">
+              <div className="lg:col-span-1 ">
                 <a
                   href={modalData?.imgOne}
                   target="_blank"
@@ -203,7 +203,7 @@ const Projects = () => {
             <h1 className="">Technology Use</h1>
 
             {modalData?.technologyUse.map((item, index) => (
-              <h1 key={index} className="flex font-bold ">
+              <h1 key={index} className="flex font-bold  ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

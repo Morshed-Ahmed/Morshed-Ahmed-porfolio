@@ -8,7 +8,7 @@ const Header = () => {
       <div className="container  fixed top-0 left-0 right-0 bg-transparent z-50 mx-auto  flex justify-between items-center h-24">
         <div>
           <div className="avatar">
-            <div className="lg:w-16 xs:w-12 mask mask-squircle">
+            <div className="lg:w-14 xs:w-12 mask mask-squircle">
               <img src="/src/assets/1678859971159 (1).png" />
             </div>
           </div>

@@ -6,12 +6,12 @@ import { FiInstagram } from "react-icons/fi";
 const Contact = () => {
   return (
     <div>
-      <div className="max-w-[1250px] xs:px-4 lg:px-0 mx-auto">
-        <div className=" lg:h-[100vh] xs:mt-24 lg:mt-0 flex items-center">
+      <div className="container mx-auto">
+        <div className="  mb-28 flex items-center">
           <div className="grid grid-cols-12 gap-7">
-            <div className="lg:col-span-5 xs:col-span-12">
-              <div className="card bg-base-100 ">
-                <div className="card-body">
+            <div className="lg:col-span-6 xs:col-span-12">
+              <div className=" bg-base-100 ">
+                <div className="">
                   <h1 className="card-title text-4xl font-bold">
                     Get in Touch ✨
                   </h1>
@@ -46,9 +46,9 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="lg:col-span-7 xs:col-span-12">
-              <div className="card bg-base-100 shadow-xl">
-                <div className="card-body gap-5">
+            <div className="lg:col-span-6 xs:col-span-12">
+              <div className="card ">
+                <div className="card-body p-0 gap-5">
                   <input
                     type="text"
                     placeholder="Name"
