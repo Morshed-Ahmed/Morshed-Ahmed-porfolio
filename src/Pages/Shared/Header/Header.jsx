@@ -1,17 +1,19 @@
 import { MdContactPhone } from "react-icons/md";
 import { CgWebsite } from "react-icons/cg";
 import { Link } from "react-router-dom";
+import { IoLogoMarkdown } from "react-icons/io";
 
 const Header = () => {
   return (
     <div className=" ">
-      <div className="container  fixed top-0 left-0 right-0 bg-transparent z-50 mx-auto  flex justify-between items-center h-24">
+      <div className="md:container md:mx-auto p-4  fixed top-0 left-0 right-0 bg-transparent z-50 mx-auto  flex justify-between items-center h-24">
         <div>
-          <div className="avatar">
-            <div className="lg:w-14 xs:w-12 mask mask-squircle">
-              <img src="/src/assets/1678859971159 (1).png" />
+          <Link to={"/"}>
+            <div className="lg:w-14 xs:w-12 ">
+              {/* <img src="/src/assets/1678859971159 (1).png" /> */}
+              <IoLogoMarkdown size={60} color="#7E6EE7" />
             </div>
-          </div>
+          </Link>
         </div>
         <div>
           <ul className="menu bg-base-200 lg:menu-horizontal rounded-box hidden lg:flex">

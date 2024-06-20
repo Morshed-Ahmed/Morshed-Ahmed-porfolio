@@ -56,24 +56,16 @@ svg:nth-child(5) {
 } */
 
 .parent {
-  background-color: blue;
   position: relative;
-  /* width: 80px;
-  height: 80px; */
-  top: -25px;
-  /* transform: translate(-50%, -50%); */
+  top: 55px;
 }
 
-/* body {
-  height: 100vh;
-  display: flex;
-} */
 .parent .svg {
   width: 30px;
   height: 30px;
-  offset-path: circle(5px at center);
-  animation: spin 10s infinite linear,
-    expandCircle 2s infinite alternate ease-out;
+  offset-path: circle(10px at center);
+  animation: spin 15s infinite linear,
+    expandCircle 5s infinite alternate ease-out;
   animation-composition: accumulate, replace;
   position: absolute;
   width: 100%;
@@ -96,7 +88,7 @@ svg:nth-child(5) {
     offset-path: circle(5px at center);
   }
   100% {
-    offset-path: circle(120px at center);
+    offset-path: circle(80px at center);
   }
 }
 

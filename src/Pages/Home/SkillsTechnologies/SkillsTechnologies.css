@@ -1,0 +1,35 @@
+body {
+  @apply bg-gray-900 text-white;
+}
+
+.skill-section::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -16px; /* Adjust this value as needed */
+  width: 2px;
+  height: 16px; /* Adjust this value as needed */
+  background-color: white;
+  transform: translateX(-50%);
+}
+
+.skill-section::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 50%; /* Adjust this value as needed */
+  background-color: white;
+  transform: translateX(-50%);
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 16px; /* Adjust this value as needed */
+  background-color: white;
+  transform: translateX(-50%);
+}

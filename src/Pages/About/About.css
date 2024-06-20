@@ -1,0 +1,89 @@
+.Container {
+  background: rgb(5, 3, 16);
+  background: radial-gradient(
+    circle,
+    rgba(5, 3, 16, 1) 0%,
+    rgba(26, 21, 42, 1) 28%,
+    rgba(5, 3, 16, 1) 100%
+  );
+
+  color: white;
+  margin-top: -2px;
+}
+
+.parent {
+  background-color: blue;
+  position: relative;
+  /* width: 80px;
+  height: 80px; */
+  top: -25px;
+  /* transform: translate(-50%, -50%); */
+}
+
+/* body {
+  height: 100vh;
+  display: flex;
+} */
+.parent .svg {
+  width: 30px;
+  height: 30px;
+  offset-path: circle(5px at center);
+  animation: spin 10s infinite linear,
+    expandCircle 2s infinite alternate ease-out;
+  animation-composition: accumulate, replace;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  inset: 0;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    offset-distance: 0;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+@keyframes expandCircle {
+  0% {
+    offset-path: circle(5px at center);
+  }
+  100% {
+    offset-path: circle(120px at center);
+  }
+}
+
+svg:nth-child(2) {
+  offset-distance: 10%;
+}
+
+svg:nth-child(3) {
+  offset-distance: 20%;
+}
+
+svg:nth-child(4) {
+  offset-distance: 30%;
+}
+
+svg:nth-child(5) {
+  offset-distance: 40%;
+}
+
+svg:nth-child(6) {
+  offset-distance: 50%;
+}
+svg:nth-child(7) {
+  offset-distance: 60%;
+}
+svg:nth-child(8) {
+  offset-distance: 70%;
+}
+svg:nth-child(9) {
+  offset-distance: 80%;
+}
+svg:nth-child(10) {
+  offset-distance: 90%;
+}

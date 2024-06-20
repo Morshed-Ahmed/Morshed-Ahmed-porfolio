@@ -1,0 +1,18 @@
+.Container {
+  background: rgb(5, 3, 16);
+  background: radial-gradient(
+    circle,
+    rgba(5, 3, 16, 1) 0%,
+    rgba(26, 21, 42, 1) 28%,
+    rgba(5, 3, 16, 1) 100%
+  );
+
+  color: white;
+}
+
+.title {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#2f275d, #8574f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
