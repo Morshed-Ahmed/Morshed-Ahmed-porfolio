@@ -1,113 +1,134 @@
-import { ArcherContainer, ArcherElement } from "react-archer";
-import { motion } from "framer-motion";
+import "./SkillsTechnologies.css";
 
-const skills = [
-  {
-    category: "Frontend",
-    items: [
-      "HTML",
-      "CSS",
-      "JAVASCRIPT",
-      "REACT",
-      "NEXT JS",
-      "ZUSTAND",
-      "TAILWIND CSS",
-      "FRAMER MOTION",
-      "DOM",
-      "UNIT TEST",
-      "PERFORMANCE OPTIMIZE",
-      "SSR",
-    ],
-  },
-  {
-    category: "Backend",
-    items: [
-      "NODE",
-      "BUN",
-      "EXPRESS",
-      "REST API",
-      "ZOD VALIDATION",
-      "JWT/OAUTH",
-      "SQL",
-      "POSTGRES",
-      "PRISMA ORM",
-      "DB MODELING",
-      "STRIPE PAYMENTS",
-    ],
-  },
-  {
-    category: "Others",
-    items: [
-      "JAVASCRIPT",
-      "TYPESCRIPT",
-      "PYTHON",
-      "GO",
-      "REACT NATIVE",
-      "GIT",
-      "GITHUB",
-      "LINUX",
-      "WORDPRESS",
-      "VPS",
-      "VERCEL",
-      "UX/UI DESIGN",
-      "PRODUCT DESIGN",
-      "FIGMA",
-      "ADOBE XD",
-      "WIREFRAME",
-    ],
-  },
+const skillsOne = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "Express",
+  "MongoDB",
 ];
-
-const SkillSection = ({ category, items, id }) => (
-  <ArcherElement
-    id={id}
-    relations={[
-      {
-        targetId: "my-skills",
-        targetAnchor: "top",
-        sourceAnchor: "bottom",
-        style: { strokeColor: "white", strokeWidth: 2 },
-      },
-    ]}
-  >
-    <div className="skill-section mb-8 relative">
-      <h2 className="text-2xl text-white mb-4">{category}</h2>
-      <div className="flex flex-wrap gap-2">
-        {items.map((item, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.1 }}
-            className="p-2 bg-blue-600 rounded text-white text-center"
-          >
-            {item}
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  </ArcherElement>
-);
+const skillsTwo = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "Express",
+  "MongoDB",
+];
+const skillsThree = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "Express",
+  "MongoDB",
+];
 
 const SkillsTechnologies = () => {
   return (
-    <ArcherContainer strokeColor="white">
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="p-8 bg-gray-800 rounded-lg shadow-lg w-full max-w-4xl relative">
-          <ArcherElement id="my-skills">
-            <h1 className="text-4xl font-bold text-white text-center mb-8">
-              MY SKILLS
-            </h1>
-          </ArcherElement>
-          {skills.map((skill, index) => (
-            <SkillSection
-              key={index}
-              category={skill.category}
-              items={skill.items}
-              id={`skill-${index}`}
-            />
-          ))}
+    <div id="about" className="bg-[#110D1E] text-white md:py-7 xs:py-16">
+      <div className="w-4/5 mx-auto  mb-3 ">
+        <div className="" style={{ display: "flex", justifyContent: "center" }}>
+          <button className="border border-[#252F45] rounded px-4 py-2 font-medium">
+            Skills Technologies
+          </button>
+        </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div
+            style={{ borderLeft: "3px solid #48494E", height: "50px" }}
+          ></div>
+        </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div style={{ borderTop: "3px solid #48494E", width: "70%" }}></div>
+        </div>
+        <div style={{ width: "70%", margin: "auto" }}>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <div
+              style={{ borderLeft: "3px solid #48494E", height: "50px" }}
+            ></div>
+            <div
+              style={{
+                borderLeft: "3px solid #48494E",
+                marginLeft: "1px",
+                height: "50px",
+              }}
+            ></div>
+            <div
+              style={{ borderLeft: "3px solid #48494E", height: "50px" }}
+            ></div>
+          </div>
+        </div>
+        <div className="grid grid-cols-3 mt-2">
+          <div
+            style={{
+              display: "flex",
+              gap: "5px",
+              flexWrap: "wrap",
+              justifyContent: "start",
+            }}
+          >
+            {skillsOne.map((skill) => (
+              <div key={skill}>
+                <div
+                  style={{ padding: "2px" }}
+                  className="border border-[#252F45]  rounded"
+                >
+                  <button className="rounded bt px-2 py-1 bg-[#252F45]  text-xs text-[#dddd] hover:text-[#f6f2f2] font-medium ">
+                    {skill}
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div
+            style={{
+              display: "flex",
+              gap: "10px",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            {skillsTwo.map((skill) => (
+              <div key={skill}>
+                <div
+                  style={{ padding: "2px" }}
+                  className="border border-[#252F45]  rounded"
+                >
+                  <button className="rounded bt px-2 py-1 bg-[#252F45]  text-xs text-[#dddd] hover:text-[#f6f2f2] c">
+                    {skill}
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div
+            style={{
+              display: "flex",
+              gap: "10px",
+              flexWrap: "wrap",
+              justifyContent: "right",
+            }}
+          >
+            {skillsThree.map((skill) => (
+              <div key={skill}>
+                <div
+                  style={{ padding: "2px" }}
+                  className="border border-[#252F45]  rounded"
+                >
+                  <button className="rounded bt px-2 py-1 bg-[#252F45]  text-xs text-[#dddd] hover:text-[#f6f2f2] font-medium">
+                    {skill}
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </ArcherContainer>
+    </div>
   );
 };
 

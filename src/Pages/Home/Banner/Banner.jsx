@@ -114,8 +114,8 @@ import kk from "../../../assets/undraw_programming_re_kg9v.svg";
 
 const Banner = () => {
   return (
-    <div className="Container ">
-      <div className="md:container p-4 mx-auto md:h-dvh xs:py-24 grid md:grid-cols-3 gap-4 content-center ">
+    <div className="Container" id="home">
+      <div className="md:container p-2 mx-auto md:h-dvh xs:py-24 grid md:grid-cols-3 gap-4 content-center ">
         <div className="flex items-center ">
           <div className="flex flex-col gap-5">
             <div>

@@ -362,8 +362,8 @@ import { CiLinkedin } from "react-icons/ci";
 
 const About = () => {
   return (
-    <div className="Container">
-      <div className="md:container  px-4 mx-auto md:h-dvh xs:pb-24 grid md:grid-cols-2 gap-4 content-center">
+    <div className="Container" id="about">
+      <div className="md:container  px-2 mx-auto md:h-dvh xs:pb-24 grid md:grid-cols-2 gap-4 content-center">
         <div className="">
           <div className=" ">
             <h1 className="mb-5 md:text-4xl xs:text-3xl font-bold text-[#7E6EE7]">

@@ -1,7 +1,9 @@
 const Footer = () => {
   return (
-    <div>
-      <h1>footer</h1>
+    <div className="bg-[#0f0b2a]">
+      <h1 className="text-center text-[#ddd] font-semibold">
+        2024 © All Rights Reserved | Developed by Morshed Ahmed
+      </h1>
     </div>
   );
 };
