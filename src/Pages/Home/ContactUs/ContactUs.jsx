@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { IoIosArrowDropup } from "react-icons/io";
 import { RxDownload } from "react-icons/rx";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const ContactUs = () => {
+  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: false });
+
   const [visible, setVisible] = useState(false);
 
   const toggleVisible = () => {
@@ -26,7 +30,13 @@ const ContactUs = () => {
     <div id="contact" className="bg-[#0f0b2a] text-white ">
       <div className="md:w-3/5 xs:w-full mx-auto p-2 py-16 ">
         <hr />
-        <div className="md:w-1/2 mx-auto pt-10">
+        <motion.div
+          ref={ref1}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: inView1 ? 1 : 0, y: inView1 ? 0 : 50 }}
+          transition={{ duration: 0.8 }}
+          className="md:w-1/2 mx-auto pt-10"
+        >
           <h1 className="md:text-3xl xs:text-3xl font-bold text-[#7E6EE7] ">
             Let&apos;s connect.
           </h1>
@@ -90,7 +100,7 @@ const ContactUs = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

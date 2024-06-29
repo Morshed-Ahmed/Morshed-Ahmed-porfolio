@@ -183,7 +183,7 @@ const Header = () => {
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-5 w-5 text-[#7E6EE7]"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -198,7 +198,7 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu dropdown-content z-[1] p-2 shadow bg-[#3F3D56] rounded-box w-52"
             >
               <li>
                 <Link
@@ -206,7 +206,7 @@ const Header = () => {
                   smooth={true}
                   duration={500}
                   activeClass="text-[#7E6EE7]"
-                  className="cursor-pointer"
+                  className="cursor-pointer text-[#dddd]"
                 >
                   Home
                 </Link>
@@ -217,7 +217,7 @@ const Header = () => {
                   smooth={true}
                   duration={500}
                   activeClass="text-[#7E6EE7]"
-                  className="cursor-pointer"
+                  className="cursor-pointer text-[#dddd]"
                 >
                   About
                 </Link>
@@ -228,7 +228,7 @@ const Header = () => {
                   smooth={true}
                   duration={500}
                   activeClass="text-[#7E6EE7]"
-                  className="cursor-pointer"
+                  className="cursor-pointer text-[#dddd]"
                 >
                   Projects
                 </Link>
@@ -239,7 +239,7 @@ const Header = () => {
                   smooth={true}
                   duration={500}
                   activeClass="text-[#7E6EE7]"
-                  className="cursor-pointer"
+                  className="cursor-pointer text-[#dddd]"
                 >
                   Contact
                 </Link>

@@ -372,8 +372,8 @@ const About = () => {
         <div className="">
           <motion.div
             ref={ref1}
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: inView1 ? 1 : 0, x: inView1 ? 0 : -50 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: inView1 ? 1 : 0, y: inView1 ? 0 : 50 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="mb-5 md:text-4xl xs:text-3xl font-bold text-[#7E6EE7]">
@@ -406,29 +406,31 @@ const About = () => {
         </div>
         <motion.div
           ref={ref2}
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: inView2 ? 1 : 0, x: inView2 ? 0 : 30 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: inView2 ? 1 : 0, y: inView2 ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="md:w-3/5	   mx-auto">
-            <img
-              style={{ borderRadius: "10px", background: "#3F3D56" }}
-              src={pic}
-              alt=""
-            />
-          </div>
-          <div className="">
-            <div className="parent">
-              <TbBrandCpp className="svg text-[#7E6EE7]" />
-              <TbBrandPython className="svg text-[#7E6EE7]" />
-              <IoLogoJavascript className="svg text-[#7E6EE7]" />
-              <TbSql className="svg text-[#7E6EE7]" />
-              <TbBrandDjango className="svg text-[#7E6EE7]" />
-              <RiReactjsFill className="svg text-[#7E6EE7]" />
-              <SiPostgresql className="svg text-[#7E6EE7]" />
-              <TbBrandMongodb className="svg text-[#7E6EE7]" />
-              <TbBrandBootstrap className="svg text-[#7E6EE7]" />
-              <TbBrandTailwind className="svg text-[#7E6EE7]" />
+          <div>
+            <div className="md:w-3/5 mx-auto">
+              <img
+                style={{ borderRadius: "10px", background: "#3F3D56" }}
+                src={pic}
+                alt=""
+              />
+            </div>
+            <div className="p-3">
+              <div className="parent">
+                <TbBrandCpp className="svg text-[#7E6EE7]" />
+                <TbBrandPython className="svg text-[#7E6EE7]" />
+                <IoLogoJavascript className="svg text-[#7E6EE7]" />
+                <TbSql className="svg text-[#7E6EE7]" />
+                <TbBrandDjango className="svg text-[#7E6EE7]" />
+                <RiReactjsFill className="svg text-[#7E6EE7]" />
+                <SiPostgresql className="svg text-[#7E6EE7]" />
+                <TbBrandMongodb className="svg text-[#7E6EE7]" />
+                <TbBrandBootstrap className="svg text-[#7E6EE7]" />
+                <TbBrandTailwind className="svg text-[#7E6EE7]" />
+              </div>
             </div>
           </div>
         </motion.div>

@@ -125,8 +125,8 @@ const Banner = () => {
         <motion.div
           className="flex items-center"
           ref={ref1}
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: inView1 ? 1 : 0, y: inView1 ? 0 : -50 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: inView1 ? 1 : 0, y: inView1 ? 0 : 50 }}
           transition={{ duration: 0.8 }}
         >
           <div className="flex flex-col gap-5">
@@ -152,8 +152,8 @@ const Banner = () => {
         <motion.div
           className="p-8"
           ref={ref2}
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: inView2 ? 1 : 0, y: inView2 ? 0 : -50 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: inView2 ? 1 : 0, y: inView2 ? 0 : 50 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <img src={kk} alt="" />
@@ -161,8 +161,8 @@ const Banner = () => {
         <motion.div
           className="flex items-center"
           ref={ref3}
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: inView3 ? 1 : 0, y: inView3 ? 0 : -50 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: inView3 ? 1 : 0, y: inView3 ? 0 : 50 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <div className="flex flex-col gap-5">
