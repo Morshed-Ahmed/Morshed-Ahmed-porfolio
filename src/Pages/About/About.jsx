@@ -344,6 +344,7 @@
 // export default About;
 
 import "./About.css";
+import { motion } from "framer-motion";
 import pic from "../../assets/IMG_20220828_105958-removebg-preview (1).png";
 
 import { RxDownload } from "react-icons/rx";
@@ -359,13 +360,22 @@ import { TbBrandMongodb } from "react-icons/tb";
 import { TbBrandBootstrap } from "react-icons/tb";
 import { TbBrandTailwind } from "react-icons/tb";
 import { CiLinkedin } from "react-icons/ci";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: false });
+  const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: false });
+
   return (
     <div className="Container" id="about">
       <div className="md:container  px-2 mx-auto md:h-dvh xs:pb-24 grid md:grid-cols-2 gap-4 content-center">
         <div className="">
-          <div className=" ">
+          <motion.div
+            ref={ref1}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: inView1 ? 1 : 0, x: inView1 ? 0 : -50 }}
+            transition={{ duration: 0.8 }}
+          >
             <h1 className="mb-5 md:text-4xl xs:text-3xl font-bold text-[#7E6EE7]">
               About Me
             </h1>{" "}
@@ -392,9 +402,14 @@ const About = () => {
                 color="#453C80"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
-        <div className="">
+        <motion.div
+          ref={ref2}
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: inView2 ? 1 : 0, x: inView2 ? 0 : 30 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           <div className="md:w-3/5	   mx-auto">
             <img
               style={{ borderRadius: "10px", background: "#3F3D56" }}
@@ -416,7 +431,7 @@ const About = () => {
               <TbBrandTailwind className="svg text-[#7E6EE7]" />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -110,24 +110,36 @@
 
 import { CiDesktopMouse2, CiLocationArrow1 } from "react-icons/ci";
 import "./Banner.css";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import kk from "../../../assets/undraw_programming_re_kg9v.svg";
 
 const Banner = () => {
+  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: false });
+  const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: false });
+  const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: false });
+
   return (
     <div className="Container" id="home">
       <div className="md:container p-2 mx-auto md:h-dvh xs:py-24 grid md:grid-cols-3 gap-4 content-center ">
-        <div className="flex items-center ">
+        <motion.div
+          className="flex items-center"
+          ref={ref1}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: inView1 ? 1 : 0, y: inView1 ? 0 : -50 }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="flex flex-col gap-5">
             <div>
               <h1 className="title md:text-4xl xs:text-3xl font-bold text-[#7E6EE7]">
                 Hi
                 <br />
-                <span>I'm Morshed Admed</span>
+                <span>I&apos;m Morshed Admed</span>
               </h1>
             </div>
 
             <h1 className="text-xl text-[#605D69] font-bold">
-              Senior Interaction Designer <br /> at D.E. Shaw and Co.
+              Junior Full Stack Developer: Proficient in MERN and Django.
             </h1>
             <div>
               <button className="flex items-center gap-3 font-medium border border-[#453C80] hover:bg-[#453C80] px-3 text-[#726b9d] hover:text-[white] py-2">
@@ -136,22 +148,34 @@ const Banner = () => {
               </button>
             </div>
           </div>
-        </div>
-        <div className="p-8">
+        </motion.div>
+        <motion.div
+          className="p-8"
+          ref={ref2}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: inView2 ? 1 : 0, y: inView2 ? 0 : -50 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           <img src={kk} alt="" />
-        </div>
-        <div className="flex items-center">
+        </motion.div>
+        <motion.div
+          className="flex items-center"
+          ref={ref3}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: inView3 ? 1 : 0, y: inView3 ? 0 : -50 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
           <div className="flex flex-col gap-5">
-            <h1 className="text-2xl font-bold text-[#605D69]">
-              I love creating interactive experiences that give people the
-              oomph.
+            <h1 className="text-2xl font-bold text-[#605D69] ">
+              As a web developer, I thrive on building dynamic and engaging
+              interfaces that leave a lasting impact on users.
             </h1>
             <div className="flex items-center gap-2 text-[#605D69] font-bold">
               <CiDesktopMouse2 />
               Scroll for more
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

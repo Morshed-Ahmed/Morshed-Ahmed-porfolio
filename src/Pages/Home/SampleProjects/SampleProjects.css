@@ -23,3 +23,39 @@
 .card p {
   color: #666666;
 }
+
+/* SampleProjects.css */
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  list-style-type: none;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination li a {
+  display: block;
+  padding: 8px 12px;
+  border: 1px solid #7e6ee7;
+  border-radius: 5px;
+  color: #7e6ee7;
+  text-decoration: none;
+}
+
+.pagination li a:hover {
+  background-color: #7e6ee7;
+  color: white;
+}
+
+.pagination li.active a {
+  background-color: #7e6ee7;
+  color: white;
+}
+
+.pagination li.disabled a {
+  color: #ccc;
+  pointer-events: none;
+}

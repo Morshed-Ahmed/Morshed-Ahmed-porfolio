@@ -1,3 +1,5 @@
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import "./SkillsTechnologies.css";
 
 const skillsOne = [
@@ -29,9 +31,16 @@ const skillsThree = [
 ];
 
 const SkillsTechnologies = () => {
+  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: false });
   return (
     <div id="about" className="bg-[#110D1E] text-white md:py-7 xs:py-16">
-      <div className="w-4/5 mx-auto  mb-3 ">
+      <motion.div
+        ref={ref1}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: inView1 ? 1 : 0, y: inView1 ? 0 : 50 }}
+        transition={{ duration: 0.8 }}
+        className="w-4/5 mx-auto  mb-3 "
+      >
         <div className="" style={{ display: "flex", justifyContent: "center" }}>
           <button className="border border-[#252F45] rounded px-4 py-2 font-medium">
             Skills Technologies
@@ -127,7 +136,7 @@ const SkillsTechnologies = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -388,19 +388,52 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useInView } from "react-intersection-observer";
+import ReactPaginate from "react-paginate";
 import "./SampleProjects.css";
 import { GoArrowUpRight } from "react-icons/go";
+
+import { bb, cc } from "../../../assets/image/image";
 
 const tabData = {
   frontend: [
     {
       title: "Frontend Development",
+      name: "Bazaar Buzz",
       content:
         "Frontend development involves building the user interface of a web application.",
-      imageUrl: "https://jribh.com/spacetime.6198bdf3.png",
+      imageUrl: bb,
     },
     {
       title: "Responsive Design",
+      name: "Bazaar Buzz",
+      content:
+        "Building responsive and adaptive interfaces for various devices.",
+      imageUrl: "https://jribh.com/spacetime.6198bdf3.png",
+    },
+    {
+      title: "Frontend Development",
+      name: "Example Project 1",
+      content:
+        "Frontend development involves building the user interface of a web application.",
+      imageUrl: bb,
+    },
+    {
+      title: "Responsive Design",
+      name: "Example Project 2",
+      content:
+        "Building responsive and adaptive interfaces for various devices.",
+      imageUrl: "https://jribh.com/spacetime.6198bdf3.png",
+    },
+    {
+      title: "Frontend Development",
+      name: "Example Project 3",
+      content:
+        "Frontend development involves building the user interface of a web application.",
+      imageUrl: bb,
+    },
+    {
+      title: "Responsive Design",
+      name: "Example Project 4",
       content:
         "Building responsive and adaptive interfaces for various devices.",
       imageUrl: "https://jribh.com/spacetime.6198bdf3.png",
@@ -409,24 +442,58 @@ const tabData = {
   fullstack: [
     {
       title: "FullStack Development",
+      name: "Bazaar Buzz",
       content:
         "Full Stack development involves both frontend and backend development.",
-      imageUrl: "https://jribh.com/spacetime.6198bdf3.png",
+      imageUrl: bb,
     },
     {
-      title: "API Integration",
+      title: "FullStack Development",
+      name: "Health Pro",
       content: "Integrating third-party APIs into applications.",
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: cc,
+    },
+    {
+      title: "FullStack Development",
+      name: "Example Project 5",
+      content:
+        "Full Stack development involves both frontend and backend development.",
+      imageUrl: bb,
+    },
+    {
+      title: "FullStack Development",
+      name: "Example Project 6",
+      content: "Integrating third-party APIs into applications.",
+      imageUrl: cc,
     },
   ],
 };
 
+const ITEMS_PER_PAGE = 3; // প্রতিটি পেজে কতগুলো আইটেম দেখানো হবে
+
 const SampleProjects = () => {
   const [activeTab, setActiveTab] = useState("frontend");
+  const [modalContent, setModalContent] = useState(null);
+  const [currentPage, setCurrentPage] = useState(0);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
+    setCurrentPage(0); // ট্যাব পরিবর্তন করলে প্রথম পেজে ফিরিয়ে নেওয়া
   };
+
+  const handleCardClick = (project) => {
+    setModalContent(project);
+    document.getElementById("my_modal_3").showModal();
+  };
+
+  const handlePageClick = ({ selected }) => {
+    setCurrentPage(selected);
+  };
+
+  const currentData = tabData[activeTab].slice(
+    currentPage * ITEMS_PER_PAGE,
+    (currentPage + 1) * ITEMS_PER_PAGE
+  );
 
   return (
     <div className="bg-[#0f0b2a] text-white min-h-screen" id="projects">
@@ -451,25 +518,36 @@ const SampleProjects = () => {
         </div>
 
         <div className="mt-1">
-          {Object.keys(tabData).map(
-            (key) =>
-              activeTab === key && (
-                <TabPanel key={key} value={activeTab} index={key}>
-                  {tabData[key].map((project, idx) => (
-                    <CardWithScrollAnimation
-                      key={idx}
-                      title={project.title}
-                      content={project.content}
-                      imageUrl={project.imageUrl}
-                    />
-                  ))}
-                </TabPanel>
-              )
-          )}
+          <TabPanel value={activeTab} index={activeTab}>
+            {currentData.map((project, idx) => (
+              <CardWithScrollAnimation
+                key={idx}
+                title={project.title}
+                name={project.name}
+                content={project.content}
+                imageUrl={project.imageUrl}
+                onClick={() => handleCardClick(project)}
+              />
+            ))}
+          </TabPanel>
+
+          <div>
+            <ReactPaginate
+              previousLabel={"Previous"}
+              nextLabel={"Next"}
+              breakLabel={"..."}
+              pageCount={Math.ceil(tabData[activeTab].length / ITEMS_PER_PAGE)}
+              marginPagesDisplayed={2}
+              pageRangeDisplayed={3}
+              onPageChange={handlePageClick}
+              containerClassName={"pagination"}
+              activeClassName={"active"}
+            />
+          </div>
         </div>
       </div>
 
-      <dialog id="my_modal_3" className="modal ">
+      <dialog id="my_modal_3" className="modal">
         <div className="modal-box bg-[#191437] md:w-3/5 max-w-5xl">
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
@@ -478,15 +556,17 @@ const SampleProjects = () => {
             </button>
           </form>
           <div>
-            <h3 className=" text-2xl">
-              Pard Spotter (Parking Management System)
-            </h3>
-            <div className="flex gap-2">
-              <button className="text-[#b6abff] flex items-center gap-1">
-                Go to website <GoArrowUpRight />
-              </button>
-              <div className="border border-[#b6abff]"></div>
-            </div>
+            {modalContent && (
+              <>
+                <h3 className="text-2xl">{modalContent.name}</h3>
+                <div className="flex gap-2">
+                  <button className="text-[#b6abff] flex items-center gap-1">
+                    Go to website <GoArrowUpRight />
+                  </button>
+                  <div className="border border-[#b6abff]"></div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </dialog>
@@ -510,18 +590,20 @@ const TabPanel = (props) => {
   );
 };
 
-const CardWithScrollAnimation = ({ title, content, imageUrl }) => {
+const CardWithScrollAnimation = ({
+  title,
+  content,
+  imageUrl,
+  name,
+  onClick,
+}) => {
   const [ref, inView] = useInView({
     triggerOnce: false, // Trigger animation every time card enters viewport
     threshold: 0.5,
   });
 
   return (
-    <div
-      ref={ref}
-      className="mt-4 cursor-pointer"
-      onClick={() => document.getElementById("my_modal_3").showModal()}
-    >
+    <div ref={ref} className="mt-4 cursor-pointer" onClick={onClick}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
@@ -533,13 +615,12 @@ const CardWithScrollAnimation = ({ title, content, imageUrl }) => {
             <img className="rounded-lg w-full" src={imageUrl} alt={title} />
           </div>
           <div className="md:col-span-5 xs:col-span-12 flex flex-col justify-center gap-2">
-            <h1 className="text-2xl font-bold">{title}</h1>
+            <h1 className="text-2xl font-bold">{name}</h1>
             <p className="mt-2 text-gray-300">{content}</p>
             <button className="text-sm flex items-center gap-2">
               Details <GoArrowUpRight />
             </button>
           </div>
-          {/* You can open the modal using document.getElementById('ID').showModal() method */}
         </div>
       </motion.div>
     </div>
