@@ -107,8 +107,8 @@ import { SiAboutdotme } from "react-icons/si";
 const Header = () => {
   return (
     <div>
-      <div className="md:container md:mx-auto p-1 fixed top-0 left-0 right-0  z-50 flex justify-between items-center h-24">
-        <div>
+      <div className="md:container md:mx-auto  fixed top-0 left-0 right-0  z-50 flex justify-between p-2 ">
+        <div style={{ marginTop: "-7px" }}>
           <Link to="home" smooth={true} duration={500}>
             <div className="lg:w-14 xs:w-12 cursor-pointer">
               <IoLogoMarkdown size={60} color="#7E6EE7" />

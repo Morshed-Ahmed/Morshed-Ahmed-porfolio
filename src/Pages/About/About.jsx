@@ -397,9 +397,9 @@ const About = () => {
                 <RxDownload />
               </button>
               <CiLinkedin
-                className="cursor-pointer"
+                className="cursor-pointer text-[#726b9d] hover:text-[#453C80]"
                 size={49}
-                color="#453C80"
+                // color="#453C80"
               />
             </div>
           </motion.div>

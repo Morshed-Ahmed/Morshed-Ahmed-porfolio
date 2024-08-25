@@ -391,17 +391,120 @@ import { useInView } from "react-intersection-observer";
 import ReactPaginate from "react-paginate";
 import "./SampleProjects.css";
 import { GoArrowUpRight } from "react-icons/go";
+import { FaArrowRight } from "react-icons/fa";
 
-import { bb, cc } from "../../../assets/image/image";
+import {
+  BazaarBuzzBanner,
+  BazaarBuzzHome,
+  BazaarBuzzProducts,
+  BazaarBuzzProductDts,
+  BazaarBuzzPymentInfo,
+  BazaarBuzzPyment,
+  cc,
+  HealthProBanner,
+  HealthProHome,
+  HealthProDoctorDts,
+  HealthProAppointment,
+  HealthProProfile,
+  ParkSpotterMainBanner,
+  ParkSpotterMainHome,
+  ParkSpotterMainRegister,
+  ParkSpotterMainDashboard,
+  ParkSpotterMainTicketCreate,
+  ParkSpotterMainAvailableSlots,
+  ParkSpotterMainTicketPayment,
+  ParkSpotterMainEmployeeList,
+  ParkSpotterMainEmployeeSelary,
+  ParkSpotterMainZones,
+  ParkSpotterMainLocation,
+  ParkSpotterPwa1,
+  ParkSpotterPwa2,
+  ParkSpotterPwa3,
+  ParkSpotterPwa4,
+  ParkSpotterPwa5,
+  ParkSpotterPwa6,
+  Education1,
+  Education2,
+  Education3,
+  Education4,
+  Education5,
+  DoctorTeam1,
+  DoctorTeam2,
+  CartCalculate1,
+  CartCalculate2,
+  SearchBooks,
+  MacbookPro1,
+  MacbookPro2,
+} from "../../../assets/image/image";
 
 const tabData = {
   frontend: [
     {
       title: "Frontend Development",
-      name: "Bazaar Buzz",
+      name: "Online Education",
       content:
-        "Frontend development involves building the user interface of a web application.",
-      imageUrl: bb,
+        "Full Stack development involves both frontend and backend development.",
+      imageUrl: Education1,
+      images: [Education2, Education3, Education4, Education5],
+      links: [
+        '<a  target="_blank" href="https://silly-borg-d99dd4.netlify.app/">Go to website</a>',
+        '<a target="_blank" href="https://github.com/Morshed-Ahmed/Edication-online">Github link</a>',
+      ],
+      description: [],
+      technologies: ["React", "React router", "React bootstrap", "Recharts"],
+    },
+    {
+      title: "Frontend Development",
+      name: "Doctors Team",
+      content:
+        "Full Stack development involves both frontend and backend development.",
+      imageUrl: DoctorTeam2,
+      images: [DoctorTeam1],
+      links: [
+        '<a  target="_blank" href="https://admiring-galileo-b2235a.netlify.app/ ">Go to website</a>',
+      ],
+      description: [],
+      technologies: ["React", "React bootstrap"],
+    },
+    {
+      title: "Frontend Development",
+      name: "Cart Calculate",
+      content:
+        "Full Stack development involves both frontend and backend development.",
+      imageUrl: CartCalculate2,
+      images: [CartCalculate1],
+      links: [
+        '<a  target="_blank" href="https://sad-carson-bbaecb.netlify.app/">Go to website</a>',
+      ],
+      description: [],
+      technologies: ["React", "React bootstrap"],
+    },
+    {
+      title: "Frontend Development",
+      name: "Search Books",
+      content:
+        "Full Stack development involves both frontend and backend development.",
+      imageUrl: SearchBooks,
+      images: [SearchBooks],
+      links: [
+        '<a  target="_blank" href="https://competent-varahamihira-2509f9.netlify.app/">Go to website</a>',
+      ],
+      description: [],
+      technologies: ["HTML", "CSS", "Javascript", "Bootstrap"],
+    },
+    {
+      title: "Frontend Development",
+      name: "Mackbook Pro",
+      content:
+        "Full Stack development involves both frontend and backend development.",
+      imageUrl: MacbookPro1,
+      images: [MacbookPro2],
+      links: [
+        '<a  target="_blank" href="https://wonderful-meitner-fad835.netlify.app/">Go to website</a>',
+        '<a  target="_blank" href="https://github.com/Morshed-Ahmed/mackbook-pro">Github link</a>',
+      ],
+      description: [],
+      technologies: ["HTML", "CSS", "Javascript"],
     },
     {
       title: "Responsive Design",
@@ -409,13 +512,15 @@ const tabData = {
       content:
         "Building responsive and adaptive interfaces for various devices.",
       imageUrl: "https://jribh.com/spacetime.6198bdf3.png",
+      images: [BazaarBuzzBanner, cc],
     },
     {
       title: "Frontend Development",
       name: "Example Project 1",
       content:
         "Frontend development involves building the user interface of a web application.",
-      imageUrl: bb,
+      imageUrl: BazaarBuzzBanner,
+      images: [BazaarBuzzBanner, cc],
     },
     {
       title: "Responsive Design",
@@ -423,13 +528,15 @@ const tabData = {
       content:
         "Building responsive and adaptive interfaces for various devices.",
       imageUrl: "https://jribh.com/spacetime.6198bdf3.png",
+      images: [BazaarBuzzBanner, cc],
     },
     {
       title: "Frontend Development",
       name: "Example Project 3",
       content:
         "Frontend development involves building the user interface of a web application.",
-      imageUrl: bb,
+      imageUrl: BazaarBuzzBanner,
+      images: [BazaarBuzzBanner, cc],
     },
     {
       title: "Responsive Design",
@@ -437,6 +544,7 @@ const tabData = {
       content:
         "Building responsive and adaptive interfaces for various devices.",
       imageUrl: "https://jribh.com/spacetime.6198bdf3.png",
+      images: [BazaarBuzzBanner, cc],
     },
   ],
   fullstack: [
@@ -445,31 +553,205 @@ const tabData = {
       name: "Bazaar Buzz",
       content:
         "Full Stack development involves both frontend and backend development.",
-      imageUrl: bb,
+      imageUrl: BazaarBuzzBanner,
+      images: [
+        BazaarBuzzHome,
+        BazaarBuzzProducts,
+        BazaarBuzzProductDts,
+        BazaarBuzzPymentInfo,
+        BazaarBuzzPyment,
+      ],
+      links: [
+        '<a  target="_blank" href="https://bazaarbuzz.netlify.app/">Go to website</a>',
+        '<a target="_blank" href="https://github.com/Morshed-Ahmed/BazaarBuzz-client">Frontend github link</a>',
+        '<a target="_blank" href="https://github.com/Morshed-Ahmed/BazaarBuzz-server">Backend github link</a>',
+      ],
+      description: [
+        "User Authentication: Secure sign-up, sign-in, and log-out functionality using Django's authentication system, integrated seamlessly with React.",
+        "Cart Management: Dynamic cart management allowing users to add, update, and remove items, with real-time updates and persistent cart state.",
+        "Checkout Process: Streamlined checkout process guiding users through order confirmation, payment, and review, ensuring a smooth purchasing experience.",
+        "Stripe Payment Integration: Secure payment gateway integration with Stripe, enabling credit card transactions and handling payment errors gracefully.",
+        "Order History: Comprehensive order history page where users can view past purchases, track order statuses, and reorder products easily.",
+        "Profile Management: User profile page with the ability to update personal details, manage shipping addresses, and store payment information for faster checkouts.",
+        "Responsive Design: Fully responsive UI/UX ensuring optimal user experience across all devices, from desktops to mobile phones.",
+        "Backend API: Robust Django backend with RESTful APIs to handle user authentication, cart operations, order management, and payment processing efficiently.",
+      ],
+      technologies: [
+        "Django Rest Framework",
+        "React",
+        "Bootstrap",
+        "SqLite",
+        "Stripe payment",
+      ],
+    },
+    {
+      title: "FullStack Development",
+      name: "Bazaar Buzz",
+      content:
+        "Full Stack development involves both frontend and backend development.",
+      imageUrl: ParkSpotterMainBanner,
+      images: [
+        ParkSpotterMainHome,
+        ParkSpotterMainRegister,
+        ParkSpotterMainDashboard,
+        ParkSpotterMainTicketCreate,
+        ParkSpotterMainAvailableSlots,
+        ParkSpotterMainTicketPayment,
+        ParkSpotterMainEmployeeList,
+        ParkSpotterMainEmployeeSelary,
+        ParkSpotterMainZones,
+        ParkSpotterMainLocation,
+        ParkSpotterPwa1,
+        ParkSpotterPwa2,
+        ParkSpotterPwa3,
+        ParkSpotterPwa4,
+        ParkSpotterPwa5,
+        ParkSpotterPwa6,
+      ],
+      links: [
+        '<a  target="_blank" href="https://development-parkspotter.netlify.app/">Go to website</a>',
+        '<a  target="_blank" href="https://development-parkspotter-pwa.netlify.app/">Customer PWA App Live Site</a>',
+        '<a  target="_blank" href="https://parkspotter-dashboard-development.netlify.app/">Admin Dashboard Live Site</a>',
+        '<a target="_blank" href="https://lucid.app/lucidchart/28efe63c-9423-4e9f-9fc6-527ec0624d64/edit?invitationId=inv_db5affd9-5ad5-439e-bdb4-304cb4df5dd6&page=HWEp-vi-RSFO#">E-R Diagram Link</a>',
+      ],
+      description: [
+        "Implemented seamless communication and data synchronization across the User App, Park Owner Dashboard, and Admin Dashboard, ensuring consistent and up-to-date information flow across all user roles and interfaces.",
+        "JWT-Authenticated Sign-Up and Login: Implemented JWT-based sign-up and login processes in the User App, ensuring secure and fast access for users.",
+        "Mapbox Integration with Clustering: Integrated Mapbox in the User App, utilizing clustering and lazy loading to reduce map load times by 25%, enhancing the user experience when viewing locations.",
+        "Slot Booking with Redux Thunk: Developed a slot booking feature in the User App using Redux Thunk, optimizing state management to ensure smooth and responsive bookings.",
+        "User Profile Management: Built user profile management in the User App with local storage caching, reducing load times by 20%, allowing users to quickly access and manage their profiles.",
+        "Responsive UI for User App: Designed the User App with a responsive interface, ensuring smooth navigation across devices like smartphones, tablets, and desktops.",
+        "Real-Time Notifications for Users: Implemented real-time notifications in the User App, keeping users informed instantly about their booking confirmations and updates.",
+        "Overview Section with Async Fetching: In the Park Owner Dashboard, an Overview section was built using asynchronous data fetching and memoization, improving data retrieval speed by 40% for quick access to key metrics.",
+        "Employee Management System: Designed the employee management system in the Park Owner Dashboard with batch payroll processing and performance tracking, boosting speed by 35% and streamlining staff management.",
+        "Zones Management with Virtualized Lists: Integrated zones management in the Park Owner Dashboard using virtualized lists, enabling efficient handling and rendering of large data sets for park zones.",
+        "Location Update with Debounce: Added location update functionality in the Park Owner Dashboard with debounce, reducing server load by 15% and ensuring smoother updates without overloading the system.",
+        "Real-Time Slot Management: Enhanced slot management in the Park Owner Dashboard to provide real-time updates, allowing park owners to manage slot availability with minimal delay.",
+        "Revenue Tracking in Park Owner Dashboard: Integrated a revenue tracking system within the Park Owner Dashboard, enabling park owners to monitor their earnings in real-time and gain financial insights.",
+        "Optimized Overview Dashboards: In the Admin Dashboard, optimized Overview dashboards were implemented to cut data retrieval and rendering times by 50%, allowing admins to access crucial metrics quickly.",
+        "Analytics Menu with Faster Graph Rendering: Developed and optimized the Analytics menu in the Admin Dashboard, reducing graph rendering times by 30%, facilitating faster data analysis.",
+        "Park Owner Management with Pagination: Implemented Park Owner management in the Admin Dashboard using pagination and filtering, enabling efficient handling of large data sets for better management.",
+        "Subscriptions Menu with Enhanced State Management: Built and optimized the Subscriptions menu in the Admin Dashboard, reducing load times by 20% through effective state management, streamlining subscription handling.",
+        "Bookings Menu with Infinite Scrolling: Designed the Bookings menu in the Admin Dashboard with infinite scrolling, improving performance and user experience by allowing seamless navigation through booking records.",
+        "Interactive Map Integration: Integrated an interactive map using Mapbox GL JS across both the User App and Admin Dashboard, with optimized vector tiles for smooth interactions, enhancing the user experience when visualizing data on the map.",
+      ],
+      technologies: [
+        "Django Rest Framework",
+        "React",
+        "React style components",
+        "React Saga",
+        "Mapbox",
+        "Stripe payment",
+        "SqLite",
+      ],
+    },
+    {
+      title: "FullStack Development",
+      name: "Bazaar Buzz",
+      content:
+        "Full Stack development involves both frontend and backend development.",
+      imageUrl: HealthProBanner,
+      images: [
+        HealthProHome,
+        HealthProDoctorDts,
+        HealthProAppointment,
+        HealthProProfile,
+      ],
+      links: [
+        '<a  target="_blank" href="https://healthpro.onrender.com/">Go to website</a>',
+        '<a target="_blank" href="https://github.com/Morshed-Ahmed/HealthPro">Github link</a>',
+      ],
+      description: [
+        "Email Verification & Secure Authentication: Users must verify their email to activate their accounts, ensuring a secure login process.",
+        "Patient Appointment Booking & Reviews: Patients can book appointments with doctors and provide reviews for their services.",
+        "Doctor Profile Management: Doctors can view, edit, and delete patient records from their profile, making it easy to manage patient information.",
+        "Homepage with Filters: The homepage displays doctors and patients, filtered by expertise, providing quick access to relevant information.",
+        "Admin Dashboard: An administrative dashboard allows the admin to manage the website, including user roles, appointments, and reviews.",
+        "User-friendly Interface: The system is designed with an intuitive and user-friendly interface, making it easy for both doctors and patients to navigate.",
+        "Hosting & Deployment: The project includes hosting and deployment, making the system accessible online with a live link and GitHub repository for code management.",
+      ],
+      technologies: ["Django templates", "Bootstrap", "SqLite"],
     },
     {
       title: "FullStack Development",
       name: "Health Pro",
       content: "Integrating third-party APIs into applications.",
       imageUrl: cc,
+      images: [BazaarBuzzBanner, cc],
     },
     {
       title: "FullStack Development",
       name: "Example Project 5",
       content:
         "Full Stack development involves both frontend and backend development.",
-      imageUrl: bb,
+      imageUrl: BazaarBuzzBanner,
+      images: [BazaarBuzzBanner, cc],
     },
     {
       title: "FullStack Development",
       name: "Example Project 6",
       content: "Integrating third-party APIs into applications.",
       imageUrl: cc,
+      images: [BazaarBuzzBanner, cc],
+    },
+  ],
+  ReactNative: [
+    {
+      title: "ReactNative Development",
+      name: "Bazaar Buzz",
+      content:
+        "Frontend development involves building the user interface of a web application.",
+      imageUrl: BazaarBuzzBanner,
+      link: {
+        liveLink: "https://jribh.com/spacetime.6198bdf3.com",
+        gitHubLink: "https://jribh.com/spacetime.6198bdf3.com",
+      },
+      images: [BazaarBuzzBanner, cc],
+    },
+    {
+      title: "Responsive Design",
+      name: "Bazaar Buzz",
+      content:
+        "Building responsive and adaptive interfaces for various devices.",
+      imageUrl: "https://jribh.com/spacetime.6198bdf3.png",
+      images: [BazaarBuzzBanner, cc],
+    },
+    {
+      title: "Frontend Development",
+      name: "Example Project 1",
+      content:
+        "Frontend development involves building the user interface of a web application.",
+      imageUrl: BazaarBuzzBanner,
+      images: [BazaarBuzzBanner, cc],
+    },
+    {
+      title: "Responsive Design",
+      name: "Example Project 2",
+      content:
+        "Building responsive and adaptive interfaces for various devices.",
+      imageUrl: "https://jribh.com/spacetime.6198bdf3.png",
+      images: [BazaarBuzzBanner, cc],
+    },
+    {
+      title: "Frontend Development",
+      name: "Example Project 3",
+      content:
+        "Frontend development involves building the user interface of a web application.",
+      imageUrl: BazaarBuzzBanner,
+      images: [BazaarBuzzBanner, cc],
+    },
+    {
+      title: "Responsive Design",
+      name: "Example Project 4",
+      content:
+        "Building responsive and adaptive interfaces for various devices.",
+      imageUrl: "https://jribh.com/spacetime.6198bdf3.png",
+      images: [BazaarBuzzBanner, cc],
     },
   ],
 };
 
-const ITEMS_PER_PAGE = 3; // প্রতিটি পেজে কতগুলো আইটেম দেখানো হবে
+const ITEMS_PER_PAGE = 3;
 
 const SampleProjects = () => {
   const [activeTab, setActiveTab] = useState("frontend");
@@ -478,7 +760,7 @@ const SampleProjects = () => {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    setCurrentPage(0); // ট্যাব পরিবর্তন করলে প্রথম পেজে ফিরিয়ে নেওয়া
+    setCurrentPage(0);
   };
 
   const handleCardClick = (project) => {
@@ -555,15 +837,67 @@ const SampleProjects = () => {
               ✕
             </button>
           </form>
-          <div>
+          <div className="text-[#fffc]">
             {modalContent && (
               <>
-                <h3 className="text-2xl">{modalContent.name}</h3>
-                <div className="flex gap-2">
-                  <button className="text-[#b6abff] flex items-center gap-1">
+                <h3 className="text-2xl ">{modalContent.name}</h3>
+                <div className="flex flex-wrap gap-2 mb-10">
+                  {/* <button className="text-[#b6abff] flex items-center gap-1">
                     Go to website <GoArrowUpRight />
                   </button>
-                  <div className="border border-[#b6abff]"></div>
+                  <div className="border border-[#b6abff]"></div> */}
+                  {modalContent.links.map((link, index) => (
+                    <div key={index} className="flex  gap-2">
+                      <div className="flex items-center gap-1 text-[#b6abff]  hover:text-[#9a8df1]">
+                        <div
+                          dangerouslySetInnerHTML={{ __html: link }}
+                          className="text-[#b6abff]  hover:text-[#9a8df1]"
+                        />
+                        <GoArrowUpRight />
+                      </div>
+                      <div className="border border-[#b6abff]"></div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="columns-2 md:columns-3 lg:columns-3 gap-4 ">
+                  {modalContent.images.map((imageName, index) => (
+                    <img
+                      key={index}
+                      src={imageName}
+                      alt={imageName}
+                      className="mb-4 w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 break-inside-avoid"
+                    />
+                  ))}
+                </div>
+                <div className="my-10">
+                  {modalContent.description.map((des, index) => (
+                    <div key={index}>
+                      <div className="flex items-start gap-3 mb-2">
+                        <FaArrowRight className="mt-1" />
+                        {des}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="my-10 flex flex-wrap gap-2">
+                  <h1 className="font-bold">Technology use: </h1>
+                  {modalContent.technologies.map((technologie, index) => (
+                    <div key={index}>
+                      <div className="">
+                        {technologie}
+                        {index + 1 == modalContent.technologies.length ? (
+                          <>
+                            <span>.</span>
+                          </>
+                        ) : (
+                          <>
+                            <span>,</span>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </>
             )}
